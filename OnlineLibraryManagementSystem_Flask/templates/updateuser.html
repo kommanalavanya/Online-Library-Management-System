@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+
+<ul>
+ 
+
+  
+</ul>
+<div style="padding-left:400px;padding-top:100px;">
+<table>
+<form method="post" action="updateuserdb">
+<tr><td>UserId</td><td><input type="text" name="id1" value="{{d[0][0]}}"></td></tr>
+<tr><td> Name</td><td><input type="text" name="name" value="{{d[0][1]}}"></td></tr>
+<tr><td>Email</td><td><input type="text" name="email" value="{{d[0][2]}}"></td></tr>
+<tr><td>Phone</td><td><input type="text" name="phone" value="{{d[0][3]}}"></td></tr>
+<tr><td>Password</td><td><input type="text" name="password"  value="{{d[0][4]}}"></td></tr>
+<tr><td><input type="submit" value="update"></td><td><input type="reset" value="Clear"></td></tr>
+</form>
+</table>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+
+<ul>
+    <li><a class="active" href="MyBooks">MyBooks</a></li>
+  <li><a href="UserProfile">Profile</a></li>
+  <li><a href="userViewBooks">ViewBooks</a></li>
+  <li><a href="SearchBooks">SearchBooks</a></li>
+  <li><a href="userLogin">Logout</a></li>
+  
+  
+</ul>
+<div style="padding-left:400px;padding-top:100px;">
+<table border=1 width=500>
+<tr><td>BookID</td><td>BookName</td><td>AuthorName</td><td>Date of Publishing</td><td>BookCost</td></tr>
+{% for row in d%}
+<tr>
+{% for col in row %}
+<td>{{col}}</td>
+{%endfor%}
+<td>
+<form method="post" action="HireBook">
+
+<input type="hidden" name="bid" value="{{row[0]}}">
+<input type="submit" value="Hire">
+
+<input type="hidden" name="bookname" value="{{row[1]}}">
+
+</form>
+</td>
+
+
+</form>
+
+</td>
+</tr>
+
+{%endfor%}
+</table>
+</div>
+</body>
+</html>
+
+

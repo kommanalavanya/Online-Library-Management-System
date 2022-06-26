@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+  padding-left: 30px;
+  margin-top: 100px;
+  padding-left: 300px;
+}
+  
+.col{
+  float: left;
+  width: 20%;
+  
+ 
+
+}
+
+/* Clearfix (clear floats) */
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<ul>
+    <li><a class="active" href="MyBooks">My Books</a></li>
+  <li><a href="UserProfile">Profile</a></li>
+  <li><a href="userViewBooks">ViewBooks</a></li>
+  <li><a href="SearchBooks">SearchBooks</a></li>
+  <li><a href="userLogin">Logout</a></li>
+  
+  
+</ul>
+
+<div class="row">
+<div class="col">
+<table>
+
+<tr><td>ID:</td></tr>
+  <tr><td>Name:</td></tr>
+<tr><td>Email:</td></tr>
+ <tr><td>Contact:</td></tr> 
+<tr> <td>Password:</td></tr>
+</table>
+</div>
+<div class="col" >
+  <table>
+{% for row in d%}
+{% for col in row %}
+<tr><td>{{col}}</td></tr>
+{%endfor%}
+<tr><td>
+<form method="post" action="updateuser">
+
+<input type="hidden" name="bid" value="{{row[0]}}">
+<input type="submit" value="update">
+</form>
+
+</div>
+</div>
+{%endfor%}
+</td></tr>
+</table>
+</body>
+</html>
+
+

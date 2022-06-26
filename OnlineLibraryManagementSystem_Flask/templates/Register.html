@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+    <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: #04AA6D;
+        }
+        </style>
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="adminLogin">AdminLogin</a></li>
+    <li><a href="userLogin">UserLogin</a></li>
+    <li><a href="aboutus">About Us</a></li>
+    <li><a href="contactus">Contact Us</a></li>
+    
+  </ul>
+    <div style="padding-left:400px;padding-top:100px;">
+        <table>
+        <form method="post" action="choice" >
+        <tr><td>userId</td><td><input type="text" name="id1"></td></tr>
+        <tr><td>Name</td><td><input type="text" name="name"></td></tr>
+        <tr><td>Email</td><td><input type="text" name="email"></td></tr>
+        <tr><td>Phoneno</td><td><input type="text" name="phone"></td></tr>       
+        <tr><td colspan=2 align=center><input type="submit" name="register" value="register"></td></tr>
+        </form>
+        </table>
+        </div>
+</body>
+</html>

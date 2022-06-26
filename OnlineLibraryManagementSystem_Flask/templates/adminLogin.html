@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active"  href="adminLogin">AdminLogin</a></li>
+  <li><a href="userLogin">UserLogin</a></li>
+  <li><a href="aboutus">About Us</a></li>
+  <li><a href="contactus">Contact Us</a></li>
+
+</ul>
+
+<div style="padding-left:400px;padding-top:100px;">
+    <table>
+    <form method="post" action="admindb"> 
+    <tr><td>User Name</td><td><input type="text" name="uname"></td></tr>
+    <tr><td>Password</td><td><input type="password" name="pwd"></td></tr>
+    <tr><td><input type="submit" value="Login"></td><td><input type="reset" value="Clear"></td></tr>
+  <strong style="color: red;">{{result}}</strong>
+    </form>
+    </table>
+    </div>
+</body>
+</html>
+
+

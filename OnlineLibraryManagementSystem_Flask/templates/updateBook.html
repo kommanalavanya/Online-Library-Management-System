@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="Register">Register</a></li>
+  <li><a href="login">Login</a></li>
+  <li><a href="addBooks">AddBooks</a></li>
+  <li><a href="viewBooks">ViewBooks</a></li>
+  
+</ul>
+<div style="padding-left:400px;padding-top:100px;">
+<table>
+<form method="post" action="updateBooksDB">
+<tr><td>Book ID</td><td><input type="text" name="t1" value="{{d[0][0]}}"></td></tr>
+<tr><td>Book Name</td><td><input type="text" name="t2" value="{{d[0][1]}}"></td></tr>
+<tr><td>Author Name</td><td><input type="text" name="t3" value="{{d[0][2]}}"></td></tr>
+<tr><td>Date Of Publishing</td><td><input type="date" name="t4" value="{{d[0][3]}}"></td></tr>
+<tr><td>Book cost</td><td><input type="text" name="t5"  value="{{d[0][4]}}"></td></tr>
+<tr><td><input type="submit" value="updateBook"></td><td><input type="reset" value="Clear"></td></tr>
+</form>
+</table>
+</div>
+</body>
+</html>
+
+
