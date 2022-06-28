@@ -5,7 +5,7 @@ import smtplib,random,string
 import mysql.connector
 app=Flask(__name__)
 
-db=mysql.connector.connect(database="library",user="root",password="admin")
+db=mysql.connector.connect(database="library",user="",password="")
 c=db.cursor()
 
 
