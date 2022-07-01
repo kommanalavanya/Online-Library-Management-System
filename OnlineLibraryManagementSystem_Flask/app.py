@@ -71,7 +71,7 @@ def submit():
                 e=request.form['email']
                 s=smtplib.SMTP('smtp.gmail.com',587)
                 s.starttls()
-                s.login("klavanya20082000@gmail.com","orbcjkfquwuckdhe")
+                s.login("your email","your email app password")#if you dont no about apppassword you can search in google how to generate app password
 
                 s.sendmail('',e,s1)
                 s.quit()
